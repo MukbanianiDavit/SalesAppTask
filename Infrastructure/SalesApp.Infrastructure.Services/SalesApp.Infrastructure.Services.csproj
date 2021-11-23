@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Mappings\**" />
+    <EmbeddedResource Remove="Mappings\**" />
+    <None Remove="Mappings\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SalesApp.Infrastructure.Data\SalesApp.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\SalesApp.Infrastructure.Models\SalesApp.Infrastructure.Models.csproj" />
+  </ItemGroup>
+
+</Project>

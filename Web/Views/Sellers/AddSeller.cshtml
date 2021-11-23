@@ -1,0 +1,19 @@
+﻿@model SellerAddRequest
+<form method="post" asp-action="AddSeller">
+  <div class="mb-3">
+    <label asp-for="SellerBossId" class="form-label">Boss Id</label>
+    <input asp-for="SellerBossId" class="form-control">
+    <span asp-validation-for="SellerBossId" class="text-danger"></span>
+  </div>
+  <div class="mb-3">
+    <label asp-for="SellerFname" class="form-label">First Name</label>
+    <input asp-for="SellerFname" class="form-control">
+    <span asp-validation-for="SellerFname" class="text-danger"></span>
+  </div>
+    <div class="mb-3">
+    <label asp-for="SellerLname" class="form-label">Last Name</label>
+    <input asp-for="SellerLname" class="form-control">
+    <span asp-validation-for="SellerLname" class="text-danger"></span>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

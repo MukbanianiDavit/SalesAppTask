@@ -1,0 +1,24 @@
+﻿@model List<ClientViewModel>
+
+<a type="button" class="btn btn-success mb-3" asp-controller="Clients" asp-action="AddClient">Add Client</a>
+<div class="table-responsive bg-white p-3 rounded-3 shadow">
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Id</th>
+				<th scope="col">First Name</th>
+				<th scope="col">Last Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td scope="row">@item.ClientId</td>
+					<td>@item.ClientFname</td>
+					<td>@item.ClientLname</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

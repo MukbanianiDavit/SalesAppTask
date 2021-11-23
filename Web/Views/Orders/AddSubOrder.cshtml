@@ -1,0 +1,20 @@
+﻿@model SuborderAddRequest
+<form method="post" asp-action="AddSubOrder">
+  <div class="mb-3">
+    <label asp-for="OrderParentId" class="form-label">Parent Order Id</label>
+    <input asp-for="OrderParentId" class="form-control" disabled />
+    <input asp-for="OrderParentId" class="form-control" hidden />
+    <span asp-validation-for="OrderParentId" class="text-danger"></span>
+  </div>
+  <div class="mb-3">
+    <label asp-for="OrderAmount" class="form-label">Order Amount</label>
+    <input asp-for="OrderAmount" class="form-control">
+    <span asp-validation-for="OrderAmount" class="text-danger"></span>
+  </div>
+    <div class="mb-3">
+    <label asp-for="OrderDate" class="form-label">Order Date</label>
+    <input type="date" asp-for="OrderDate" class="form-control">
+    <span asp-validation-for="OrderDate" class="text-danger"></span>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

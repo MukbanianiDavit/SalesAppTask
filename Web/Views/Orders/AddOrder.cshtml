@@ -1,0 +1,24 @@
+﻿@model OrderAddRequest
+<form method="post" asp-action="AddOrder">
+	<div class="mb-3">
+		<label asp-for="OrderClientId" class="form-label">Client Id</label>
+		<input asp-for="OrderClientId" class="form-control">
+		<span asp-validation-for="OrderClientId" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="OrderSellerId" class="form-label">Seller Id</label>
+		<input asp-for="OrderSellerId" class="form-control">
+		<span asp-validation-for="OrderSellerId" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="OrderAmount" class="form-label">Amount</label>
+		<input asp-for="OrderAmount" class="form-control">
+		<span asp-validation-for="OrderAmount" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="OrderDate" class="form-label">Order Date</label>
+		<input type="date" asp-for="OrderDate" class="form-control">
+		<span asp-validation-for="OrderDate" class="text-danger"></span>
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>

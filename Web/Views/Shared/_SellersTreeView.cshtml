@@ -1,0 +1,20 @@
+﻿@model SellerTreeNodeViewModel
+
+@{
+    bool hasEmployees = Model.Employees.Any();
+    string carretClass = hasEmployees ? "caret" : "";
+    string fullName = $"{Model.SellerFname} {Model.SellerLname}";
+}
+
+<li class="list-group-item">
+    <span class="@carretClass">@Model.SellerId - @fullName</span>
+    @if (hasEmployees)
+    {
+        <ul class="nested list-group">
+            @foreach (var item in Model.Employees)
+            {
+                <partial name="_SellersTreeView" model="item" />
+            }
+        </ul>
+    }
+</li>

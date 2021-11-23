@@ -1,0 +1,14 @@
+﻿@model ClientAddRequest
+<form method="post" asp-action="AddClient">
+	<div class="mb-3">
+		<label asp-for="ClientFname" class="form-label">First Name</label>
+		<input asp-for="ClientFname" class="form-control">
+		<span asp-validation-for="ClientFname" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="ClientLname" class="form-label">Last Name</label>
+		<input asp-for="ClientLname" class="form-control">
+		<span asp-validation-for="ClientLname" class="text-danger"></span>
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>

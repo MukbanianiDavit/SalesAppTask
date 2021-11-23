@@ -1,0 +1,34 @@
+﻿@model List<OrderViewModel>
+
+<a type="button" class="btn btn-success mb-3" asp-controller="Orders" asp-action="AddOrder">Add Order</a>
+<div class="table-responsive bg-white p-3 rounded-3 shadow">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Client Id</th>
+                <th scope="col">Seller Id</th>
+                <th scope="col">Order Date</th>
+                <th scope="col">Order Total Amount</th>
+                <th scope="col">Order Suborders Count</th>
+                <th width="180" scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td scope="row">@item.OrderId</td>
+                    <td>@item.OrderClientId</td>
+                    <td>@item.OrderSellerId</td>
+                    <td>@item.OrderDate</td>
+                    <td>@item.OrderTotalAmount</td>
+                    <td>@item.OrderSubordersCount</td>
+                    <td>
+                        <a type="button" class="btn btn-sm btn-warning" asp-controller="Orders" asp-action="AddSubOrder" asp-route-id="@item.OrderId">Add Sub Order</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
